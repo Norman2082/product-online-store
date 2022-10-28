@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.exception.SupplierNotFoundException;
@@ -19,7 +20,9 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class SupplierService {
+	@Autowired
 	private SupplierRepository repo;
+	@Autowired
 	private ModelMapper mapper;
 	
 	private SupplierDTO mapToDTO(Supplier supplier) {

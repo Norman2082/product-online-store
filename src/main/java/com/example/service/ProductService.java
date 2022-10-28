@@ -14,13 +14,16 @@ import com.example.rest.dto.ProductDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 	@AllArgsConstructor
 	@Data
 	public class ProductService {
-
+@Autowired
 		private ProductRepository repo;
+@Autowired
 		private ModelMapper mapper;
 		
 		private ProductDTO mapToDTO(Product product) {
