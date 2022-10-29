@@ -45,7 +45,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 			Product existing = tempProduct.get();
 			existing.setProductName(product.getProductName());
 			existing.setSuppliers(product.getSuppliers());
+			existing.setProductDetails(product.getProductDetails());
+			existing.setProductOrders(product.getProductOrders());
+			existing.setProductPrice(product.getProductPrice());
+		    existing.setProductQuantity(product.getProductQuantity());
+		    
 			
+
 			Product updated = this.repo.save(existing);
 			return this.mapToDTO(updated);
 		}
@@ -60,6 +66,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 		public ProductDTO readById(Long id) {
 	        Product found = this.repo.findById(id).orElseThrow(ProductNotFoundException::new);
 	        return this.mapToDTO(found);}
+
+		public ProductDTO productByName(String product) {
+			// TODO Auto-generated method stub
+			return null;
+		}
 
 
 	    

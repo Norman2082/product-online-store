@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Product {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@JsonIgnore
+
 	private Long id;
 	
 	private Long productQuantity;
@@ -34,7 +34,7 @@ public class Product {
 	private String productName;
 	@OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
     @OnDelete(action = OnDeleteAction.CASCADE)
-	
+	@JsonIgnore
     private List<Supplier> suppliers = new ArrayList<>();
 	
 	public Long getId() {

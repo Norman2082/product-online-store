@@ -46,18 +46,17 @@ public class ProductController {
 		return service.deleteProduct(id);
 	}
 	
-	@GetMapping("/productById")
-	public ProductDTO readProductById(@PathParam("product_id") Long id) {
+	@GetMapping("/productById/{id}")
+	public ProductDTO readProductById(@PathParam("product") Long id) {
 		return service.readById(id);
 	}
 	
-//	@GetMapping("/productByName")
-//	public ProductDTO readByName(@PathParam("productName") String product){
-//		return service.productByName(product);
+	@GetMapping("/productByName")
+	public ProductDTO readByName(@PathParam("product") String product){
+	return service.productByName(product);
 //	}
 
-}
-
+}}
 	
 	
 	
