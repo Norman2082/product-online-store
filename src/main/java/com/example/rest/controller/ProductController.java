@@ -48,7 +48,7 @@ public class ProductController {
 	
 	@GetMapping("/productById/{id}")
 	public ProductDTO readProductById(@PathParam("product") Long id) {
-		return service.readById(id);
+		return (ProductDTO) service.productById(id);
 	}
 	
 	@GetMapping("/productByName")

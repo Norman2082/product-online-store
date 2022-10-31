@@ -1,6 +1,6 @@
 package com.example.rest.dto;
 
-
+import com.example.persistence.repository.ProductRepository;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -12,7 +12,7 @@ import com.example.persistence.domain.Supplier;
 @Repository
 	public interface SupplierRepository  extends JpaRepository<Supplier, Long>{
 //		
-//		@Query("select s from Supplier s where s.supplierName=?1")
+	@Query("select s from Supplier s where s.supplierName=?1")
 	Optional<List<Supplier>> supplierByName(String supplierName);
 
 	}

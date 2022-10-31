@@ -12,8 +12,9 @@ import com.example.persistence.domain.Product;
 @Repository
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-//	@Query("select p from Product p  where p.productName=?1")
-//    Optional<Product> productByName(String productName);
+
+
+	@Query("select p from Product p  where p.productName=?1")
+   Optional<Product> productByName(String productName);
 ////
-//}
 }

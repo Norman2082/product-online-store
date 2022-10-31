@@ -43,6 +43,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 			Optional<Product> tempProduct = Optional.of(this.repo.findById(id).orElseThrow(ProductNotFoundException::new));
 			
 			Product existing = tempProduct.get();
+			existing.setProductId(product.getId());
 			existing.setProductName(product.getProductName());
 			existing.setSuppliers(product.getSuppliers());
 			existing.setProductDetails(product.getProductDetails());
@@ -57,7 +58,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 		}
 		
 		public boolean deleteProduct(Long id) {
-			this.repo.findById(id).orElseThrow(ProductNotFoundException::new);
+			this.repo.findById(id);
 			this.repo.deleteById(id);
 			boolean exists = this.repo.existsById(id);
 			return !exists;
@@ -67,7 +68,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 	        Product found = this.repo.findById(id).orElseThrow(ProductNotFoundException::new);
 	        return this.mapToDTO(found);}
 
-		public ProductDTO productByName(String product) {
+		
+
+		public Object productById(Long id) {
 			// TODO Auto-generated method stub
 			return null;
 		}
@@ -75,11 +78,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 	    
 		
-//	public ProductDTO productByName(String productName) {
-//			Product found = this.repo.productByName(productName).orElseThrow(ProductNotFoundException::new);
-//			return this.mapToDTO(found);
-//		}		
+	public ProductDTO productByName(String productName) {
+			Product found = this.repo.productByName(productName).orElseThrow(ProductNotFoundException::new);
+			return this.mapToDTO(found);
 	}
+	
+			public ProductDTO getProductById(Long id) {
+				return this.mapToDTO(this.repo.findById(id).get());
+				
+		}
+
+	}		
+	
 	        
 	
 
