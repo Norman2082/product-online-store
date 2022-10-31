@@ -51,17 +51,17 @@ import lombok.AllArgsConstructor;
 		public SupplierDTO readSupplierById(@PathParam("supplierId") Long id) {
 			return service.readById(id);
 		
-		
-//		@GetMapping("/supplierByName")
-	//	public List<SupplierDTO> readByName(@PathParam("supplierName") String supplier){
-	//	return service.supplierByName(supplier);
-//		}
+		}
+//	@GetMapping("/supplierByName")
+//		public List<SupplierDTO> readByName(@PathParam("supplierName") String supplier){
+//		return service.supplierByName(supplier);
+////		}
+//
+//	
+		}
+	
+	
 
-	
-		}}
-	
-	
-	
 	
 	
 	

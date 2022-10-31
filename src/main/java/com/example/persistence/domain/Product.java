@@ -26,7 +26,7 @@ public class Product {
 	private Long id;
 	
 	private Long productQuantity;
-	private Float productPrice;
+	private Double productPrice;
 	private String productDetails;
 	private Long productOrders;
 	
@@ -40,7 +40,6 @@ public class Product {
 	public Long getId() {
 		return id;
 	}
-
 	public void setProductId(Long id) {
 		this.id = id;
 	}
@@ -61,11 +60,11 @@ public class Product {
 		this.productQuantity = productQuantity;
 	}
 
-	public Float getProductPrice() {
+	public Double getProductPrice() {
 		return productPrice;
 	}
 
-	public void setProductPrice(Float productPrice) {
+	public void setProductPrice(Double productPrice) {
 		this.productPrice = productPrice;
 	}
 
@@ -94,7 +93,7 @@ public class Product {
 	
 	
 
-	public Product(Long id, String productName, Long productQuantity, Float productPrice,
+	public Product(Long id, String productName, Long productQuantity, Double productPrice,
 			String productDetails, Long productOrders) {
 		super();
 		this.id = id;
@@ -115,11 +114,24 @@ public class Product {
 				+ productName + ", suppliers=" + suppliers + "]";
 	}
 
-	public Product() {
+	public Product(long id, String productName, long productQuantity, double productPrice, String productDetails, long productOrders) {
 		super();
 	}
+	public Product() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	}
 
-}
+	
+	
+
+	
+
+	
+	
+
+
 
 
 	

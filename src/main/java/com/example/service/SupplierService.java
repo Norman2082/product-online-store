@@ -65,14 +65,23 @@ public class SupplierService {
 		return this.mapToDTO(found);
 	}
 //	
-//	public List<SupplierDTO> readByName(String name){
-//		List<Supplier> found = this.repo.supplierByName(name).orElseThrow(SupplierNotFoundException::new);
-//		return found.stream().map(this::mapToDTO).collect(Collectors.toList());
-//	}
+	public List<SupplierDTO> readByName(String name){
+   List<Supplier> found = this.repo.supplierByName(name).orElseThrow(SupplierNotFoundException::new);
+	return found.stream().map(this::mapToDTO).collect(Collectors.toList());
+//	
+	}
 
-}
+	}
+
+	
+
+
+	
+
 	
 	
+
 	
+
 	
 
