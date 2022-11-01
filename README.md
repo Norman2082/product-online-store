@@ -29,6 +29,7 @@ App operates.
 * Mockito
 * JUnit
 * Jira
+* Java 8
 
 
 
@@ -80,7 +81,8 @@ Tests were carried out using Mockito/JUnit for creating product, reading product
 
 
 # Successful tests after code modifications
-![Successful Tests](https://user-images.githubusercontent.com/111991383/199121747-23483e50-a63d-4f60-9961-2bdbf5f41de7.png)
+![Successful Tests](https://user-images.githubusercontent.com/111991383/199225355-c04c7e3f-84da-4678-83a4-75deffd3970c.png)
+
 
 ![All Tests](https://user-images.githubusercontent.com/111991383/199224689-43dd33d8-0017-4f91-b0e9-b7d8fc728e3f.png)
 
