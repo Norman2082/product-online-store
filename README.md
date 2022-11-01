@@ -66,6 +66,12 @@ App operates.
 # Delete
 ![](Delete.Supplier.png)
 
+# Spring boot execution
+* The Application above used a TomCat server. 
+* Port number used was 8080 it was therefore very essential to keep port clear.
+* The project can be run as Java Application or Spring boot Application once you right click.
+* Once application is applied you can run CRUD operations using Postman.
+
 # Database ERD
 The diagram shows the relationship between the product and the supplier. The diagram represents a one to many model therefore
 one product supplied by many suppliers.
